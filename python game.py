@@ -1,3 +1,5 @@
+#created 08/02/202
+#from Keith Galli very helpful youtube video
 #libraries
 import pygame
 import sys

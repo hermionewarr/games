@@ -1,5 +1,3 @@
-#created 08/02/202
-#from Keith Galli very helpful youtube video
 #libraries
 import pygame
 import sys
@@ -48,7 +46,11 @@ def set_level(score, speed, num_of_enemies):
 
 def drop_enemies(enemy_list, num_of_enemies):
 	delay = random.random()
-	if len(enemy_list) < num_of_enemies and delay < 0.07:
+	if num_of_enemies < 20:
+		x = 0.06
+	else:
+		x=0.2
+	if len(enemy_list) < num_of_enemies and delay < x:
 		x_pos = random.randint(0, width - enemy_size)
 		y_pos = 0
 		enemy_list.append([x_pos,y_pos])
@@ -137,6 +139,6 @@ while not game_over:
 	draw_enemies(enemy_list)
 	pygame.draw.rect(screen, red, (player_position[0], player_position[1], player_size, player_size))
 	
-	clock.tick(20)
+	clock.tick(30)
 
 	pygame.display.update()

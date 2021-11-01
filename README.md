@@ -1,3 +1,3 @@
-# games
+# Game
 
-Build a basic falling block game with a friendly library
+Built a basic falling block game with a friendly library
